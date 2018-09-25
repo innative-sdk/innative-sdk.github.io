@@ -1,2 +1,3 @@
-# innative-sdk.github.io
+# inNative Project
+
 Official inNative website: https://innative.io

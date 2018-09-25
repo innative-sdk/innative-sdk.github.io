@@ -1,0 +1,149 @@
+/* HTML Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+  margin: 0.5em 3em 0.5em 3em;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  height: 100%;
+}
+/* Begin site CSS */
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background: #030303;
+  background: radial-gradient(ellipse at center, hsl(0,0%,0%) 0%,hsl(0,0%,4%) 44%,hsl(180,0%,17%) 100%);
+  min-width: 300px;
+  height: 100%;
+  
+}
+
+
+nav {
+  position:relative;
+  background: #ccccd1;
+	font: 500 small-caps 1.03rem Helvetica, Arial, sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  box-shadow: 0 0 3px #000;
+  z-index: 10;
+  user-select: none;
+}
+nav p {
+  display: inline;
+}
+nav ul {
+  margin: 0 auto;
+  padding: 0.35em 0;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  border-left: 1px #666 solid;
+  padding: 0 0.8em;
+}
+nav ul li:first-child {
+  border-left: 0;
+}
+nav ul li a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.4em 0.75em;
+  border: 1px transparent solid;
+  box-shadow: 0 0 1px transparent;
+  text-shadow: 0 1px 1px #ddd;
+  font-size: 140%;
+}
+nav ul li a:hover {
+  color: #000;
+  border: 1px #fff solid;
+  box-shadow: 0 0 1px #000;
+  background: #e3e3e3;
+}
+header {
+  width: 100%;
+  text-align: center;
+  line-height: 20rem;
+  animation-name: introsize;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+header #logo img {
+  width: 20%;
+  opacity: 1;
+  animation-name: intro;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes intro {
+    from {opacity: -0.2; width: 40%;}
+    to {opacity: 1; width: 20%;}
+}
+@keyframes intronews {
+    from {opacity: -0.2; }
+    to {opacity: 1; }
+}
+@keyframes introsize {
+    from {line-height: 30rem;}
+    to {line-height: 20rem;}
+}
+
+main {
+  animation-name: intronews;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+h2 {
+  color: #d5d5d7;
+	font: 800 small-caps 2rem Helvetica, Arial, sans-serif;
+  letter-spacing: 8px;
+  border-bottom: 1px solid #999;
+  margin-bottom: 0.5em;
+}
+article {
+  color: #f5f5f6;
+  font: 0.9rem "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+}
