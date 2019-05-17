@@ -1,0 +1,37 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+<header>
+{{ partial "logo.html" . }}
+</header>
+<div id="content">
+<main>
+  <section>
+    <meta itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" content="{{ .Site.BaseURL }}"/>
+    <meta itemprop="dateModified" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" />
+    <meta itemprop="headline" content="{{ .Title }}" />
+    <meta itemprop="description" content="{{ .Summary }}" />
+    <meta itemprop="url" content="{{ .Permalink }}" />
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="{{ .Site.BaseURL }}{{ .Site.Params.image }}" />
+        <meta itemprop="width" content="140" />
+        <meta itemprop="height" content="140" />
+      </div>
+      <meta itemprop="name" content="{{ .Site.Title }}" />
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="{{ .Params.Author.name }}" />
+    </div>  
+    <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+    <aside>{{ .Params.subtitle }}</aside>
+    <hr/>
+    <article>
+      {{ .Content }}
+      <hr/>
+      <time itemprop="datePublished" pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}"><i class="fa fa-clock-o fa-fw"></i> Published on <a href="{{ .Permalink }}">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "January 2, 2006 at 3:04pm" }}{{ end }}</a></time>
+    </article>
+  </section>
+</main>
+{{ partial "aside.html" . }}
+</div>
+{{ partial "foot.html" . }}

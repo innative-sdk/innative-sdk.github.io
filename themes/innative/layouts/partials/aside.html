@@ -1,0 +1,19 @@
+<aside>
+<section id="news">
+<h3><a href="/news/">Latest News</a></h2>
+  <ul>
+    {{ range $index, $element := .Site.Taxonomies.categories.news.Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</section>
+<section id="social">
+<h3>Community</h3>
+  <ul>
+    {{ range .Site.Menus.buttons }}
+    <li><a href="{{.URL}}" title="{{.Name}}">{{ if eq .Identifier "patreon" }}{{ partial "patreon.html" . }}{{else}}<i class="fa fa-{{.Identifier}} fa-fw fa-lg"></i>{{end}} {{.Name}}</a></li>
+    {{ end }}
+  </ul>
+</section>
+<iframe src="https://discordapp.com/widget?id=575089630647681046&theme=dark" width="250" height="400" allowtransparency="true" frameborder="0" style="box-shadow: 0px 0px 3px #000;border-radius:3px;"></iframe>
+</aside>

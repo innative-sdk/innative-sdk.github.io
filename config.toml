@@ -1,0 +1,89 @@
+baseURL = "https://innative.dev/"
+languageCode = "en-us"
+title = "inNative WebAssembly Runtime"
+copyright = "Black Sphere Studios"
+defaultLayout = "post"
+disableKinds = ["taxonomy"]
+layoutDir = "layouts"
+paginate = 5
+paginatePath = "page"
+theme = "innative"
+[author]
+name = "Erik McClure"
+twitter = "blackhole0173"
+uri = "https://github.com/blackhole12"
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+[[menu.main]]
+identifier = "book"
+name = "Documentation"
+url = "https://github.com/innative-sdk/innative/wiki"
+weight = 2
+[[menu.main]]
+identifier = "download"
+name = "Download"
+url = "https://github.com/innative-sdk/innative/releases"
+weight = 3
+[[menu.main]]
+identifier = "github"
+name = "Github"
+url = "https://github.com/innative-sdk/innative"
+weight = 4
+[[menu.main]]
+identifier = "patreon"
+name = "Patreon"
+url = "https://www.patreon.com/innative"
+weight = 5
+[[menu.buttons]]
+identifier = "patreon"
+name = "Patreon"
+url = "https://www.patreon.com/innative"
+weight = 1
+[[menu.buttons]]
+identifier = "github"
+name = "Github"
+url = "https://github.com/innative-sdk/innative"
+weight = 2
+[[menu.buttons]]
+identifier = "twitter"
+name = "Twitter"
+url = "https://twitter.com/innative_sdk"
+weight = 3
+[[menu.buttons]]
+identifier = "reddit"
+name = "Reddit"
+url = "https://www.reddit.com/r/innative"
+weight = 4
+[[menu.buttons]]
+identifier = "comments"
+name = "Discord"
+url = "https://discord.gg/teQ9Uz5"
+weight = 5
+[[menu.dl]]
+identifier = "innative-posix-sdk-x64.tar.gz"
+name = "SDK"
+url = "Linux"
+weight = 1
+[[menu.dl]]
+identifier = "innative-windows-installer-x64.zip"
+name = "Installer"
+url = "Windows"
+weight = 2
+[[menu.dl]]
+identifier = "innative-windows-sdk-x64.zip"
+name = "SDK"
+url = "Windows"
+weight = 3
+[params]
+description = "Compile WebAssembly to native binaries, or embed inNative and provide your own WebAssembly execution environment."
+googleanalytics = ""
+image = "innative-logo.png"
+twitter = "innative-sdk"
+version = "0.1.0"
+keywords = "inNative, native, wasm, webassembly, native webassembly, non-web embedding, embedding, compiler, runtime, sdk, innative sdk, innative runtime"
+[taxonomies]
+category = "categories"
+tag = "tags"

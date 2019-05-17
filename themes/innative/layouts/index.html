@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+<header>
+{{ partial "logo.html" . }}
+<section>
+  {{ range .Site.Menus.dl }}
+  <div><a href="https://github.com/innative-sdk/innative/releases/download/v{{ $.Site.Params.version }}/{{ .Identifier }}" title="{{.URL}} {{.Name}}"><i class="fa fa-arrow-down fa-fw fa-lg"></i><b>{{.URL}}</b>{{.Name}}<p>v{{ $.Site.Params.version }}</p></a></div>
+  {{ end }}
+</section>
+</header>
+<div id="content">
+<main>
+<section id="intro">
+<h1>{{.Title}}</h1>
+<hr/>
+<article>
+{{.Content}}
+</article>
+</section>
+</main>
+{{ partial "aside.html" . }}
+</div>
+{{ partial "foot.html" . }}
