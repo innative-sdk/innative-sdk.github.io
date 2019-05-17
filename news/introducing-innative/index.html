@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="copyright" content="Copyright (c)2019 Black Sphere Studios" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="keywords" content="inNative, native, wasm, webassembly, native webassembly, non-web embedding, embedding, compiler, runtime, sdk, innative sdk, innative runtime">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <link rel="canonical" href="https://innative.dev/news/introducing-innative/"/>
+  <link rel="apple-touch-icon" href="https://innative.dev/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://innative.dev/favicon.ico" />
+  
+	<link rel="stylesheet" href="/css/innative.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="alternate" type="application/rss+xml" title="inNative WebAssembly Runtime - RSS" href="https://innative.dev/index.xml" />
+
+  
+  <title>Introducing Innative - inNative WebAssembly Runtime</title>
+  <meta property='og:title' content="Introducing Innative - inNative WebAssembly Runtime">
+  <meta name="twitter:title" content="Introducing Innative - inNative WebAssembly Runtime" />
+  <meta itemprop="name" content="Introducing Innative - inNative WebAssembly Runtime" />
+  
+  
+  
+  <meta name="description" content="Many people are excited about WebAssembly, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C&#43;&#43;, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
+I am not interested in this." />
+  <meta property="og:description" content="Many people are excited about WebAssembly, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C&#43;&#43;, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
+I am not interested in this." />
+  <meta name="twitter:description" content="Many people are excited about WebAssembly, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C&#43;&#43;, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
+I am not interested in this." />
+  <meta itemprop="description" content="Many people are excited about WebAssembly, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C&#43;&#43;, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
+I am not interested in this." />
+  
+  
+  <meta property="og:site_name" content="inNative WebAssembly Runtime" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://innative.dev/" />
+  <meta property="og:keywords" content="inNative, native, wasm, webassembly, native webassembly, non-web embedding, embedding, compiler, runtime, sdk, innative sdk, innative runtime" />
+  <meta property="og:image" content="https://innative.dev/innative-logo.png" />
+  <meta property="og:locale" content="en-US" />
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@innative-sdk" />
+  <meta name="twitter:creator" content="@innative-sdk" />
+  <meta name="twitter:image" content="https://innative.dev/innative-logo.png" />
+  <meta name="twitter:dnt" content="on">
+</head>
+<body>
+<nav>
+  <ul>
+<li><a href="/" title="Home"><i class="fa fa-home fa-fw fa-lg"></i> <p>Home</p></a></li><li><a href="https://github.com/innative-sdk/innative/wiki" title="Documentation"><i class="fa fa-book fa-fw fa-lg"></i> <p>Documentation</p></a></li><li><a href="https://github.com/innative-sdk/innative/releases" title="Download"><i class="fa fa-download fa-fw fa-lg"></i> <p>Download</p></a></li><li><a href="https://github.com/innative-sdk/innative" title="Github"><i class="fa fa-github fa-fw fa-lg"></i> <p>Github</p></a></li><li><a href="https://www.patreon.com/innative" title="Patreon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 136 130" class="icon-img-big"><path fill="#102030" d="M108.8135992 26.06720125c-26.468266 0-48.00213212 21.53066613-48.00213212 47.99733213 0 26.38653268 21.53386613 47.85426547 48.00213213 47.85426547 26.38639937 0 47.8530655-21.4677328 47.8530655-47.85426547 0-26.466666-21.46666613-47.99733213-47.85306547-47.99733213"></path><path fill="#102030" d="M23.333335 153.93333178V26.0666679h23.46666576v127.8666639z"></path></svg> <p>Patreon</p></a></li>
+  </ul>
+</nav>
+<header>
+<div id="logo"><img src="/img/innative.png" alt="inNative"/></div>
+</header>
+<div id="content">
+<main>
+  <section>
+    <meta itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" content="https://innative.dev/"/>
+    <meta itemprop="dateModified" content="2019-05-17T05:09:04-07:00" />
+    <meta itemprop="headline" content="Introducing Innative" />
+    <meta itemprop="description" content="Many people are excited about WebAssembly, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C&#43;&#43;, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
+I am not interested in this." />
+    <meta itemprop="url" content="https://innative.dev/news/introducing-innative/" />
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="https://innative.dev/innative-logo.png" />
+        <meta itemprop="width" content="140" />
+        <meta itemprop="height" content="140" />
+      </div>
+      <meta itemprop="name" content="inNative WebAssembly Runtime" />
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="" />
+    </div>  
+    <h1><a href="/news/introducing-innative/">Introducing Innative</a></h1>
+    <aside>Running WebAssembly Outside The Sandbox at 95% Native Speed</aside>
+    <hr/>
+    <article>
+      <p>Many people are excited about <a href="https://webassembly.org/">WebAssembly</a>, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C++, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.</p>
+
+<p>I am not interested in this. I am interested in answering a completely different question: <strong>How fast can WebAssembly go if you remove the sandbox?</strong></p>
+
+<p>If you think about it, most of your programs run outside a sandbox. This is why we have anti-virus software and &ldquo;Run As Administrator&rdquo;, since the kernel doesn&rsquo;t put many restrictions on what programs can do. We just trust that the programs we install will be well behaved. What if we gave WebAssembly this same level of trust? How fast can it go?</p>
+
+<p>The answer is: <strong><em>really fast</em></strong>. inNative is an AOT (Ahead-Of-Time) compiler for WebAssembly with a customizable level of sandboxed isolation. If you turn off all the isolation and let the LLVM optimizer go crazy, you can achieve near native speeds and nearly recreate the same optimized assembly that a fully optimized C++ compiler would give you, while leveraging all the features of the host CPU. Let&rsquo;s look at some benchmarks:</p>
+
+<p>This is an average benchmark, compiled using clang <code>-O3 --march=native</code> on WSL. On average, we see 80% native speed with sandboxing and 95% without. The C++ benchmark is actually run twice - we use the second run, after the cache has had time to warm up. Turning on <code>fastmath</code> for both inNative and clang makes both go faster, but the relative speed stays the same.</p>
+
+<p>The only reason we haven&rsquo;t already gotten to 99% native speed is because WebAssembly&rsquo;s 32-bit integer indexes break LLVM&rsquo;s vectorization due to pointer aliasing. Once fixed-width SIMD instructions are added, native WebAssembly will close the gap entirely, because this vectorization analysis will have happened before the WebAssembly compilation step.</p>
+
+<p>What a lot of people don&rsquo;t realize is that these benchmarks give the C++ compiler a ridiculous advantage it usually doesn&rsquo;t have: we&rsquo;re using <code>--march=native</code>. Most projects stick to SSE4 instructions, lest they turn out like <a href="https://gearnuke.com/no-mans-sky-pc-fix-crashes-sse4-1-support/">No Man&rsquo;s Sky</a>. inNative has the same advantage that JIT compilers have, which is that it can <em>always</em> take full advantage of the native processor architecture. Yet, it also has all the advantages of a traditional ahead-of-time compiler, being able to perform extremely expensive brute force optimizations by caching it&rsquo;s compilation result. By compiling WebAssembly on the target machine <em>once</em>, we can get the advantages of both JIT and AOT compilers at the same time!</p>
+
+<p>Of course, being fast isn&rsquo;t the only thing inNative does, it also allows webassembly modules to interface directly with the operating system. Here is a webassembly module that uses the win32 API to create a GUI:</p>
+
+<p>Unfortunately, this kind of C interop is definitely not supported by the standard yet (but there is a proposal for it). As a result, inNative uses it&rsquo;s own unofficial extension to allow it to pass WebAssembly pointers into C functions. inNative also lets you write C libraries that expose themselves as WebAssembly modules, which would make it possible to build an interop library in C++.</p>
+
+      <hr/>
+      <time itemprop="datePublished" pubdate="pubdate" datetime="2019-05-17T05:09:04-07:00"><i class="fa fa-clock-o fa-fw"></i> Published on <a href="https://innative.dev/news/introducing-innative/">May 17, 2019 at 5:09am</a></time>
+    </article>
+  </section>
+</main>
+<aside>
+<section id="news">
+<h3><a href="/news/">Latest News</a></h2>
+  <ul>
+    
+    <li><a href="/news/introducing-innative/">Introducing Innative</a></li>
+    
+  </ul>
+</section>
+<section id="social">
+<h3>Community</h3>
+  <ul>
+    
+    <li><a href="https://www.patreon.com/innative" title="Patreon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 136 130" class="icon-img-big"><path fill="#102030" d="M108.8135992 26.06720125c-26.468266 0-48.00213212 21.53066613-48.00213212 47.99733213 0 26.38653268 21.53386613 47.85426547 48.00213213 47.85426547 26.38639937 0 47.8530655-21.4677328 47.8530655-47.85426547 0-26.466666-21.46666613-47.99733213-47.85306547-47.99733213"></path><path fill="#102030" d="M23.333335 153.93333178V26.0666679h23.46666576v127.8666639z"></path></svg> Patreon</a></li>
+    
+    <li><a href="https://github.com/innative-sdk/innative" title="Github"><i class="fa fa-github fa-fw fa-lg"></i> Github</a></li>
+    
+    <li><a href="https://twitter.com/innative_sdk" title="Twitter"><i class="fa fa-twitter fa-fw fa-lg"></i> Twitter</a></li>
+    
+    <li><a href="https://www.reddit.com/r/innative" title="Reddit"><i class="fa fa-reddit fa-fw fa-lg"></i> Reddit</a></li>
+    
+    <li><a href="https://discord.gg/teQ9Uz5" title="Discord"><i class="fa fa-comments fa-fw fa-lg"></i> Discord</a></li>
+    
+  </ul>
+</section>
+<iframe src="https://discordapp.com/widget?id=575089630647681046&theme=dark" width="250" height="400" allowtransparency="true" frameborder="0" style="box-shadow: 0px 0px 3px #000;border-radius:3px;"></iframe>
+</aside>
+</div>
+<footer><p><span>Copyright &copy;2019 Black Sphere Studios | </span> <a href="https://innative.dev/sitemap.xml">Sitemap</a> | <a href="https://innative.dev/index.xml">RSS Feed</a></p></footer>
+<script> </script> 
+</body>
+</html>
