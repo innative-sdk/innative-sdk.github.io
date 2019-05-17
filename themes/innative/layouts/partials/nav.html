@@ -1,0 +1,5 @@
+<nav>
+  <ul>
+{{ range .Site.Menus.main }}<li><a href="{{.URL}}" title="{{.Name}}">{{ if eq .Identifier "patreon" }}{{ partial "patreon.html" . }}{{else}}<i class="fa fa-{{.Identifier}} fa-fw fa-lg"></i>{{end}} <p>{{.Name}}</p></a></li>{{ end }}
+  </ul>
+</nav>

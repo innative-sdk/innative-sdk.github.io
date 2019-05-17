@@ -1,0 +1,13 @@
+name = "innative"
+license = "Apache"
+licenselink = "https://github.com/innative-sdk/innative/blob/master/LICENSE"
+description = "A theme for Black Sphere Studios based on Beg"
+homepage = "https://github.com/innative-sdk/innative-sdk.github.io"
+tags = ["innative", "webassembly"]
+features = ["blog"]
+min_version = 0.50
+
+[author]
+  name = "inNative"
+  homepage = "https://github.com/innative-sdk"
+

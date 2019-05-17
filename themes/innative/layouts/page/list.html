@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+<header>
+{{ partial "logo.html" . }}
+</header>
+<div id="content">
+<main>
+  {{ range $index, $element := (.Paginate .Data.Pages).Pages }}
+  {{ .Render "li" }}
+  {{ end }}
+  {{ partial "pagination.html" . }}
+</main>
+{{ partial "aside.html" . }}
+</div>
+{{ partial "foot.html" . }}
