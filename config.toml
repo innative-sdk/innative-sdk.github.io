@@ -68,7 +68,7 @@ name = "SDK"
 url = "Linux"
 weight = 1
 [[menu.dl]]
-identifier = "innative-windows-installer-x64.zip"
+identifier = "innative-windows-sdk-x64.msi"
 name = "Installer"
 url = "Windows"
 weight = 2
