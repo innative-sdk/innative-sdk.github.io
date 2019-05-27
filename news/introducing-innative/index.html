@@ -18,10 +18,10 @@
   <link rel="alternate" type="application/rss+xml" title="inNative WebAssembly Runtime - RSS" href="https://innative.dev/index.xml" />
 
   
-  <title>Introducing inNative - inNative WebAssembly Runtime</title>
-  <meta property='og:title' content="Introducing inNative - inNative WebAssembly Runtime">
-  <meta name="twitter:title" content="Introducing inNative - inNative WebAssembly Runtime" />
-  <meta itemprop="name" content="Introducing inNative - inNative WebAssembly Runtime" />
+  <title>Introducing inNative - Run WebAssembly Outside The Sandbox at 95% Native Speed</title>
+  <meta property='og:title' content="Introducing inNative - Run WebAssembly Outside The Sandbox at 95% Native Speed">
+  <meta name="twitter:title" content="Introducing inNative - Run WebAssembly Outside The Sandbox at 95% Native Speed" />
+  <meta itemprop="name" content="Introducing inNative - Run WebAssembly Outside The Sandbox at 95% Native Speed" />
   
   
   
@@ -79,16 +79,17 @@ I&rsquo;m not interested in that." />
       <meta itemprop="name" content="" />
     </div>  
     <h1><a href="/news/introducing-innative/">Introducing inNative</a></h1>
-    <aside>Running WebAssembly Outside The Sandbox at 95% Native Speed</aside>
+    <aside>Run WebAssembly Outside The Sandbox at 95% Native Speed</aside>
     <hr/>
     <article>
+      <h6><div class="author" style="background-image: url('/img/avatar-erikm.png')"><a href="https://github.com/blackhole12">Erik McClure<span>May 17, 2019</span></div></h6>
       <p>Many people are excited about <a href="https://webassembly.org/">WebAssembly</a>, which lets you use languages other than JavaScript on the web. With WebAssembly, you can run C, C++, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandbox running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.</p>
 
 <p>I&rsquo;m not interested in that. I&rsquo;m interested in a completely different question: <strong>How fast can WebAssembly go <em>outside</em> the sandbox?</strong></p>
 
 <p>If you think about it, most of your programs run outside a sandbox. This is why we have anti-virus software and &ldquo;Run As Administrator&rdquo;, since the kernel doesn&rsquo;t put many restrictions on what programs can do. We just trust that the programs we install will be well behaved. What if we gave WebAssembly this same level of trust? How fast can it go?</p>
 
-<p>The answer is: <em>really fast</em>. <a href="https://github.com/innative-sdk/innative"><strong>inNative</strong></a> is an AOT (Ahead-Of-Time) compiler for WebAssembly using LLVM with a customizable level of sandboxing. You can grab <a href="https://github.com/innative-sdk/innative/releases">a precompiled SDK from GitHub</a>, or build from source. If you turn off all the isolation and let the LLVM optimizer go crazy, you can almost reach native speeds and nearly recreate the same optimized assembly that a fully optimized C++ compiler would give you, while leveraging all the features of the host CPU. Let&rsquo;s look at some benchmarks:</p>
+<p>The answer is: <em>really fast</em>. <a href="https://github.com/innative-sdk/innative"><strong>inNative</strong></a> is an AOT (Ahead-Of-Time) compiler for WebAssembly using LLVM with a customizable level of sandboxing. You can grab <a href="https://github.com/innative-sdk/innative/releases">a precompiled SDK from GitHub</a>, or build from source. If you turn off all the isolation and let the LLVM optimizer go crazy, you can almost reach native speeds and nearly recreate the same optimized assembly that a fully optimized C++ compiler would give you, while leveraging all the features of the host CPU. Let&rsquo;s look at some benchmarks, adapted from <a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/cpp.html">these C++ benchmarks</a>:</p>
 
 <pre><code>inNative v0.1.0 Test Utility
 
