@@ -271,6 +271,31 @@ main {
   margin: 0 auto;
   width: 100%;
 }
+#content article h6 a:link {
+  font-weight: 700;
+}
+#content article h6 .author {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 48px;
+  padding-left: 3.6em;
+}
+
+#content article h6 {
+  font-size: 1rem;
+  float:right;
+  padding: 0.5em;
+  background: #f9f9f9;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  margin-left: 1em;
+  margin-right: 0.4em;
+}
+#content article h6 span {
+  font-size: 80%;
+  color: #666;
+  display: block;
+}
 #social ul li {
   
 }
