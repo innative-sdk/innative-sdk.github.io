@@ -13,13 +13,13 @@
     
     
     <item>
-      <title>Introducing Innative</title>
+      <title>Introducing inNative</title>
       <link>https://innative.dev/news/introducing-innative/</link>
       <pubDate>Fri, 17 May 2019 05:09:04 -0700</pubDate>
       
       <guid>https://innative.dev/news/introducing-innative/</guid>
-      <description>Many people are excited about WebAssembly, which lets you run languages other than JavaScript inside the browser. With WebAssembly, you can run C, C++, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandboxed environment running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
-I am not interested in this.</description>
+      <description>Many people are excited about WebAssembly, which lets you use languages other than JavaScript on the web. With WebAssembly, you can run C, C++, Rust, Zig, Go, or pretty much anything that compiles to LLVM in a sandbox running inside your web browser. This has performance costs, but many people are working on highly optimized JIT compilers designed to minimize these costs as much as possible.
+I&amp;rsquo;m not interested in that.</description>
     </item>
     
   </channel>
