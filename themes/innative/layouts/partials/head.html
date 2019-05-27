@@ -22,6 +22,11 @@
   <meta property='og:title' content="{{ .Title }}">
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta itemprop="name" content="{{ .Title }}" />
+  {{ else if isset .Params "subtitle" }}
+  <title>{{ .Title }} - {{ .Params.subtitle }}</title>
+  <meta property='og:title' content="{{ .Title }} - {{ .Params.subtitle }}">
+  <meta name="twitter:title" content="{{ .Title }} - {{ .Params.subtitle }}" />
+  <meta itemprop="name" content="{{ .Title }} - {{ .Params.subtitle }}" />
   {{ else }}
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   <meta property='og:title' content="{{ .Title }} - {{ .Site.Title }}">

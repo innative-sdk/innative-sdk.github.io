@@ -1,6 +1,9 @@
 ---
 title: "Introducing inNative"
-subtitle: "Running WebAssembly Outside The Sandbox at 95% Native Speed"
+subtitle: "Run WebAssembly Outside The Sandbox at 95% Native Speed"
+user: "Erik McClure"
+userpage: "https://github.com/blackhole12"
+avatar: "/img/avatar-erikm.png"
 date: 2019-05-17T05:09:04-07:00
 draft: false
 categories: ["news"]
@@ -12,7 +15,7 @@ I'm not interested in that. I'm interested in a completely different question: *
 
 If you think about it, most of your programs run outside a sandbox. This is why we have anti-virus software and "Run As Administrator", since the kernel doesn't put many restrictions on what programs can do. We just trust that the programs we install will be well behaved. What if we gave WebAssembly this same level of trust? How fast can it go? 
 
-The answer is: *really fast*. [**inNative**](https://github.com/innative-sdk/innative) is an AOT (Ahead-Of-Time) compiler for WebAssembly using LLVM with a customizable level of sandboxing. You can grab [a precompiled SDK from GitHub](https://github.com/innative-sdk/innative/releases), or build from source. If you turn off all the isolation and let the LLVM optimizer go crazy, you can almost reach native speeds and nearly recreate the same optimized assembly that a fully optimized C++ compiler would give you, while leveraging all the features of the host CPU. Let's look at some benchmarks:
+The answer is: *really fast*. [**inNative**](https://github.com/innative-sdk/innative) is an AOT (Ahead-Of-Time) compiler for WebAssembly using LLVM with a customizable level of sandboxing. You can grab [a precompiled SDK from GitHub](https://github.com/innative-sdk/innative/releases), or build from source. If you turn off all the isolation and let the LLVM optimizer go crazy, you can almost reach native speeds and nearly recreate the same optimized assembly that a fully optimized C++ compiler would give you, while leveraging all the features of the host CPU. Let's look at some benchmarks, adapted from [these C++ benchmarks](https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/cpp.html):
 
 ```
 inNative v0.1.0 Test Utility
