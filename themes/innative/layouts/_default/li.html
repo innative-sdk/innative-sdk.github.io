@@ -3,7 +3,7 @@
     <aside>{{ .Params.subtitle }}</aside>
     <hr/>
     <article>
-      <h6><div class="author" style="background-image: url('{{ .Params.avatar }}')"><a href="{{ .Params.userpage }}">{{ .Params.user }}<span>{{ .Date.Format "Jan 2, 2006" }}</span></div></h6>
+      <h6><div class="author" style="background-image: url('{{ .Params.avatar }}')"><a href="{{ .Params.userpage }}">{{ .Params.user }}</a><span>{{ .Date.Format "Jan 2, 2006" }}</span></div></h6>
       {{ .Content }}
       <hr/>
       <time itemprop="datePublished" pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}"><i class="fa fa-clock-o fa-fw"></i> Published on <a href="{{ .Permalink }}">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "January 2, 2006 at 3:04pm" }}{{ end }}</a></time>
