@@ -4,11 +4,11 @@
     <title>inNative WebAssembly Runtime</title>
     <link>https://innative.dev/</link>
     <description>Compile WebAssembly to native binaries, or embed inNative and provide your own WebAssembly execution environment.</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator><meta name="generator" content="Hugo 0.55.6" /></generator>
     <language>en-us</language>
     <copyright>Copyright (c)2019 Black Sphere Studios</copyright>
     <lastBuildDate>Fri, 17 May 2019 05:09:04 -0700</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://innative.dev/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introducing inNative</title>
