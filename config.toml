@@ -32,16 +32,6 @@ identifier = "github"
 name = "Github"
 url = "https://github.com/innative-sdk/innative"
 weight = 4
-[[menu.main]]
-identifier = "patreon"
-name = "Patreon"
-url = "https://www.patreon.com/innative"
-weight = 5
-[[menu.buttons]]
-identifier = "patreon"
-name = "Patreon"
-url = "https://www.patreon.com/innative"
-weight = 1
 [[menu.buttons]]
 identifier = "github"
 name = "Github"
@@ -52,11 +42,6 @@ identifier = "twitter"
 name = "Twitter"
 url = "https://twitter.com/innative_sdk"
 weight = 3
-[[menu.buttons]]
-identifier = "reddit"
-name = "Reddit"
-url = "https://www.reddit.com/r/innative"
-weight = 4
 [[menu.buttons]]
 identifier = "comments"
 name = "Discord"
@@ -82,7 +67,7 @@ description = "Compile WebAssembly to native binaries, or embed inNative and pro
 googleanalytics = ""
 image = "innative-logo.png"
 twitter = "innative-sdk"
-version = "0.1.3"
+version = "0.1.7"
 keywords = "inNative, native, wasm, webassembly, native webassembly, non-web embedding, embedding, compiler, runtime, sdk, innative sdk, innative runtime"
 [taxonomies]
 category = "categories"
