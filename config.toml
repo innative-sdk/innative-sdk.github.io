@@ -67,7 +67,7 @@ description = "Compile WebAssembly to native binaries, or embed inNative and pro
 googleanalytics = ""
 image = "innative-logo.png"
 twitter = "innative-sdk"
-version = "0.1.7"
+version = "0.1.10"
 keywords = "inNative, native, wasm, webassembly, native webassembly, non-web embedding, embedding, compiler, runtime, sdk, innative sdk, innative runtime"
 [taxonomies]
 category = "categories"
