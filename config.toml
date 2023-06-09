@@ -1,7 +1,7 @@
 baseURL = "https://innative.dev/"
 languageCode = "en-us"
 title = "inNative WebAssembly Runtime"
-copyright = "Black Sphere Studios"
+copyright = "Fundament Software"
 defaultLayout = "post"
 disableKinds = ["taxonomy"]
 layoutDir = "layouts"
